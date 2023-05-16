@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+  
+  font-size: 1.6rem;
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Screen1 */
+
+.screen1 {
+  width: 42.8rem;
+  height: 42.4rem;
+
+  background: #FFFFFF;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+  border-radius: .5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  padding: 4.8rem 6.4rem 6.4rem;
+  text-align: center;
+}
+
+.screen1 h1 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+
+  color: #34355B;
+}
+
+.screen1 p {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+
+  color: #34355B;
+}
+
+.shaking-image {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.shaking-image:hover {
+  animation: shake 0.3s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-3px, 4px); }
+  50% { transform: translate(4px, -3px); }
+  75% { transform: translate(-3px, -4px); }
+  100% { transform: translate(4px, 3px); }
+}
+
+/* Screen2 */
+
+.screen2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4.8rem 6.4rem;
+  gap: 1rem;
+
+  width: 42.8rem;
+  height: 56.4rem;
+
+  background: #FFFFFF;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+  border-radius: .5rem;
+
+  text-align: center;
+}
+
+.screen2 h2 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #34355B;
+}
+
+.screen2 p {
+  padding: 1rem;
+
+  background: #E4EDF1;
+  box-shadow: .2rem .2rem .2rem rgba(85, 85, 85, 0.5);
+
+  font-family: 'Dancing Script';
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  text-align: center;
+
+  color: #000000;
+
+  animation-name: arise;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.screen2 button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1.6rem;
+
+  width: 17.4rem;
+  height: 5.2rem;
+
+  background: #FF9500;
+  border-radius: .4rem;
+  border: none;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #FFFFFF;
+
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes arise {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
